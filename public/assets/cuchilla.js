@@ -3,18 +3,31 @@ const btns = document.querySelectorAll(".btn");
 const torture_room = document.getElementById("torture_room"); 
 const div_dinero = document.getElementById("dinero"); 
 const div_dps = document.getElementById("dps"); 
+const div_golpes = document.getElementById("golpes"); 
+const cuchillo = document.getElementById("cuchillo"); 
+const furry = document.getElementById("furry"); 
 
 let cuchillas = 0;
 let dinero = 0;
 let dps = 0;
+let golpes = 0;
 
 
 // Definir la función que se ejecutará 60 veces por segundo
 function actualizar() {
     // Código a ejecutar
     dinero = dinero + dps*16.67/1000;
+    golpes = golpes + dps*16.67/1000;
     mostrar_estadisticas();
-  }
+
+    //cambiar furrysprite
+    if(golpes > 50){
+        furry.classList = "dos";
+    }
+    if(golpes > 100){
+        furry.classList = "tres";
+    }
+}
   
   // Configurar la ejecución de la función 60 veces por segundo
   setInterval(actualizar, 16.67);
@@ -26,11 +39,17 @@ function actualizar() {
 
 
 
-torture_room.addEventListener("click", function(){
+torture_room.onmousedown= function(){
     dinero++;
-    mostrar_estadisticas();
-});
+    golpes++;
+    cuchillo.classList = "cerca";
 
+    mostrar_estadisticas();
+}
+torture_room.onmouseup= function(){
+    cuchillo.classList = "lejos";
+
+}
 btns[0].addEventListener("click", function(){
     if(dinero >= 10){
         circulo_cuchilla.innerHTML = "";
@@ -54,10 +73,6 @@ class Cuchilla{
         this.div.classList.add("cuchilla");
         this.div.style.transform = "rotate("+this.degrees+"deg)";
 
-        this.punta = document.createElement("div");
-        this.punta.classList.add("punta");
-
-        this.div.appendChild(this.punta);
         circulo_cuchilla.appendChild(this.div);
     }
     
@@ -66,4 +81,5 @@ class Cuchilla{
 function mostrar_estadisticas(){
     div_dinero.innerHTML = "Dinero:"+Math.floor(dinero);
     div_dps.innerHTML = "DPS: "+Math.floor(dps*100)/100;
+    div_golpes.innerHTML = "Golpes: "+Math.floor(golpes);
 }

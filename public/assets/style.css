@@ -14,7 +14,46 @@ body{
 #torture_room{
     left: 30%;
     width: 40%;
-    background-image: url("fondoRobadoUwu.jpg");
+    background-image: url("roomrobado2.jpg");
+}
+#furry{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 150px;
+    height: 400px;
+    bottom: -10%;
+    left: 20%;
+}
+#furry.uno{
+    background-image: url("furry.png");
+}
+#furry.dos{
+    background-image: url("furry2.png");
+}
+#furry.tres{
+    background-image: url("furry3.png");
+}
+#cuchillo{
+    background-image: url("cuchillo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    bottom:30%;
+    left: 30%;
+    transform: rotate(180deg);
+}
+#cuchillo.lejos{
+    transform: translateY(-200%) rotate(180deg);
+    transition-duration: 0.2s;
+}
+#cuchillo.cerca{
+    transform: translateY(0%) rotate(180deg);
+    transition-duration: 0s;
 }
 .btn#add_cuchilla{
     width: 200px;
@@ -51,14 +90,14 @@ body{
     height: 1rem;
 }
 #circulo_cuchilla{
-
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     position: absolute;
     border-radius: 50%;
-    left: 55%;
-    bottom: 20%;
+    left: 35%;
+    bottom: 0%;
     animation: girar 3s linear infinite;
+    z-index: 1;
 }
 @keyframes girar{
     0%{
@@ -70,19 +109,12 @@ body{
 }
 .cuchilla{
     position: absolute;
-    height: 100px;
-    width: 25px;
-    left: 87.5px;
-    background-color: yellow;
+    height: 200px;
+    width: 50px;
+    left: 175px;
+    background-image: url("cuchilla.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     transform-origin: 50% 100%;
-}
-.punta{
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    left: -37.5px;
-    top: -100px;
-    border-bottom: 100px solid #f0ad4e;
-     border-left: 50px solid transparent;
-     border-right: 50px solid transparent; 
 }
