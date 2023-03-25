@@ -8,17 +8,43 @@ body{
     width: 100vw;
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
 }
 #torture_room{
-    position: absolute;
-    width: 500px;
-    height: 100%;
+    left: 30%;
+    width: 40%;
     background-image: url("fondoRobadoUwu.jpg");
+}
+.btn{
+
+}
+#crear_cuchilla{
+    width: 200px;
+    height: 75px;
+    background: white;
+    color: black;
+    z-index: 1;
+}
+.parte{
+    position: absolute;
+    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
+}
+#mejoras{
+    left: 0%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0px;
+}
+#cuchilla{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 50%;
+    left: 55%;
+    bottom: 20%;
 }
