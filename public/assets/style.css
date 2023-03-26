@@ -55,12 +55,14 @@ body{
     transform: translateY(0%) rotate(180deg);
     transition-duration: 0s;
 }
-.btn#add_cuchilla{
+.btn{
     width: 200px;
     height: 75px;
     background: white;
     color: black;
     z-index: 1;
+    margin: 0 auto;
+    display: block;
 }
 .parte{
     position: absolute;
@@ -73,8 +75,7 @@ body{
 #mejoras{
     left: 0%;
     width: 30%;
-    display: flex;
-    justify-content: center;
+    position: relative;
     padding: 60px 0px;
 }
 #estadisticas{
@@ -118,3 +119,58 @@ body{
     background-size: cover;
     transform-origin: 50% 100%;
 }
+#ajustes{
+    filter: invert(1);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 150px;
+    right: 50px;
+    background-image: url("settings_FILL1_wght400_GRAD0_opsz48\ \(1\).svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 3;
+}
+#ajustes:hover{
+    animation: girar 3s linear infinite;
+}
+#pantalla_ajustes{
+    left: 70%;
+    width: 30%;
+    padding: 60px 0px;
+    background: gray;
+    z-index: 2;
+    display: none;
+}
+#pantalla_ajustes.active{
+    display: block;
+}
+.slot{
+    border: solid 1px black;
+    height: 3rem;
+    margin: 10px;
+}
+.slot.active{
+    background-color: rgba(255, 255, 0, 0.515);
+}
+.nombre{
+    display: inline-block;
+    margin: 10px;
+}
+.contenido{
+    display: inline-block;
+    margin: auto;
+}
+.opcion{
+    margin: auto;
+    border: solid 1px black;
+    display: inline-block;
+    margin: 10px;
+    padding: 3px 5px;
+}
+.opcion:hover{
+    background-color: rgba(255, 0, 0, 0.471);
+}
+

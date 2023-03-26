@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
     <link rel="stylesheet" href="assets/style.css">
     <title>Clicker</title>
 </head>
 <body>
     <div id="canvas">
+        <div id="pantalla_ajustes" class="parte">
+            <div id="slot_1" class="slot"><h3 class="nombre">Slot 1</h3><p class="contenido">vacio</p></div>
+            <div id="slot_2" class="slot"><h3 class="nombre">Slot 2</h3><p class="contenido">vacio</p></div>
+            <div id="slot_3" class="slot"><h3 class="nombre">Slot 3</h3><p class="contenido">vacio</p></div>
+            <button id="guardar" class="opcion">Guardar</button>
+            <button id="cargar" class="opcion">Cargar</button>
+        </div>
         <div id="torture_room" class="parte">
             <div id="circulo_cuchilla"></div>
             <div id="furry" class="uno"></div>
@@ -16,11 +24,16 @@
         </div>
         <div id="mejoras" class="parte">
             <button id="add_cuchilla" class="btn">Añadir Cuchilla(10 euros)</button>
+            <button id="mejorar_cuchillo" class="btn">mejorar Cuchillo(200 euros)</button>
+            <button id="a" class="btn">mejorar Cuchillo(10 euros)</button>
+            <button id="b" class="btn">mejorar Cuchillo(10 euros)</button>
+            
         </div>
         <div id="estadisticas" class="parte">
             <div id="dinero" class="estadistica">Dinero: 0</div>
             <div id="dps" class="estadistica">DPS: 0</div>
             <div id="golpes" class="estadistica">Golpes: 0</div>
+            <div id="ajustes"></div>
         </div>
     </div>
     <script src="assets/cuchilla.js"></script>
