@@ -81,7 +81,7 @@ btns[0].addEventListener("click", function(){
 btns[1].addEventListener("click", function(){
     if(dinero >= (200 * Math.pow(2, (lvl_cuchillo-1)))){
         lvl_cuchillo++;
-        dinero = dinero -(200 * Math.pow(2, (lvl_cuchillo-1)));
+        dinero = dinero -(200 * Math.pow(2, (lvl_cuchillo-2)));
         btns[1].innerHTML = "Mejorar cuchillo("+(200 * Math.pow(2, (lvl_cuchillo-1)))+")";
         mostrar_estadisticas();
     }
