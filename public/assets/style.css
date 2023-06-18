@@ -35,6 +35,12 @@ body{
 #furry.tres{
     background-image: url("furry3.png");
 }
+#furry.cuatro{
+    background-image: url("furry4.png");
+}
+#furry.cinco{
+    background-image: url("furryNoPito.png");
+}
 #cuchillo{
     background-image: url("cuchillo.png");
     background-position: center;
@@ -173,4 +179,63 @@ body{
 .opcion:hover{
     background-color: rgba(255, 0, 0, 0.471);
 }
+#bateria{
+    width: 150px;
+    height: 150px;
+    background-image: url("bateria.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#descarga{
+    display: none;
+    background-color: black;
+    box-shadow: 0;
+    width: 400px;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    animation: normal linear corriente 2s infinite;
+}
+@keyframes corriente{
+    0%{
+        background-color: black;
+        box-shadow: none;
+    }
+    50%{
+        background-color: black;
+        box-shadow: none;
+    }
+    50.1%{
+        background-color: blue;
+        box-shadow: 0px 0px 10px 10px rgba(0, 255, 255, 0.46);
+    }
+    99.9%{
+        background-color: blue;
+        box-shadow: 0px 0px 10px 10px rgba(0, 255, 255, 0.46);
+    }
+}
+#pene{
+    display: none;
+    position: fixed;
+    width: 80dvh;
+    height: 80dvh;
+    background-image: url("bateria.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 
+}
+#pene.cortado{
+    display: block;
+}
